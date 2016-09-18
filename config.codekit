@@ -75,6 +75,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/social.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 193523,
+		"inputAbbreviatedPath": "\/img\/social.jpg",
+		"outputAbbreviatedPath": "\/img\/social.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/tracka.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
