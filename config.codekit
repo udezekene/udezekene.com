@@ -20,6 +20,83 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/img\/browser-bg.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1716,
+		"inputAbbreviatedPath": "\/img\/browser-bg.png",
+		"outputAbbreviatedPath": "\/img\/browser-bg.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/budgit.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 324455,
+		"inputAbbreviatedPath": "\/img\/budgit.jpg",
+		"outputAbbreviatedPath": "\/img\/budgit.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/kene.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 68320,
+		"inputAbbreviatedPath": "\/img\/kene.png",
+		"outputAbbreviatedPath": "\/img\/kene.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/oil-report.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 347446,
+		"inputAbbreviatedPath": "\/img\/oil-report.jpg",
+		"outputAbbreviatedPath": "\/img\/oil-report.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/sl-ogp.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 248002,
+		"inputAbbreviatedPath": "\/img\/sl-ogp.jpg",
+		"outputAbbreviatedPath": "\/img\/sl-ogp.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/tracka.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 201272,
+		"inputAbbreviatedPath": "\/img\/tracka.jpg",
+		"outputAbbreviatedPath": "\/img\/tracka.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/truppr.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 320994,
+		"inputAbbreviatedPath": "\/img\/truppr.jpg",
+		"outputAbbreviatedPath": "\/img\/truppr.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/index.html": {
 		"fileType": 8192,
 		"ignore": 0,
