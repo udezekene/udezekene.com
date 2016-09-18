@@ -4,6 +4,9 @@
 .main-wrapper{
   border: 20px solid #fff;
   min-height: 100vh;
+  @media @mobile{
+    border-width: 10px;
+  }
 }
 header{
   position: relative;
@@ -51,7 +54,7 @@ header{
   .underlay{
     background: url(../img/kene.png) no-repeat;
     background-size: 300px;
-    background-position: right 200px bottom 60%;
+    background-position: right 20% top 10%;
     position: absolute;
     background-attachment: fixed;
     .transition;
@@ -159,10 +162,15 @@ footer{
     width: 60%;
     margin: 0 auto;
     text-align: center;
-
+    @media @mobile{
+      width: 80%;
+    }
     h3{
       font-size: 30px;
       padding-bottom: 20px;
+      @media @mobile{
+        font-size: 25px;
+      }
     }
     p{
       margin-top: 20px;
@@ -179,7 +187,9 @@ footer{
         text-transform: none;
         font-size: 18px;
         .transition;
-
+        @media @mobile{
+          color: #1771D3;
+        }
       }
     }
     >span{
