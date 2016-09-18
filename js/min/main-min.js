@@ -1,0 +1,1 @@
+$(document).ready(function(){$(window).scroll(function(){$(".underlay").css("opacity",1-$(window).scrollTop()/300),console.log($(window).scrollTop()/300)})});

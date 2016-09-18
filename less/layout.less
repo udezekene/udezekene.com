@@ -1,0 +1,282 @@
+
+.navbar {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 22px;
+}
+
+.row{
+  position: absolute;
+}
+
+/* The StellaBelle heading */
+h1 {
+  margin: 0;
+  padding: 0;
+  height: 100px;
+}
+
+#blogheading{
+  width: 100%;
+}
+
+/* LINK TEXT-DECORATION */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #339999;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+
+
+/* ADJUSTS THE IMAGES ON THE HOME PAGE */
+
+/* adjusts the banner image */
+
+#banner {
+  width: 100%;
+  margin: 0;
+  height: 322px;
+  margin: -3px 0 5% -7px;
+  background-color: white;
+  width: 104%;
+}
+
+/* end of banner adjustment */
+
+img {
+  width: 103%;
+  margin-left: -5px;
+}
+
+
+h1 {
+  font-family: 'Londrina Solid';
+  color: #0697CA;
+  text-transform: uppercase;
+  font-size: 49px;
+}
+
+h3 {
+  font-family: 'bebasregular';
+  text-align: center;
+  margin: 0;
+  word-spacing: 5px;
+}
+
+#nav {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  width: 100%;
+  margin: 0 auto;
+  height: 50px;
+  border: 0;
+}
+
+
+.header {
+  background-image: url(../green_dust_scratch.png);
+  text-align: center;
+  padding-top: 10px;
+  width: 100%;
+  margin: 0 auto;
+  height: 45px;
+  height: 50px;
+}
+
+.col-xs-12 {
+  background-image: url('assets/images/fresh_snow.png');
+  padding: 0;
+  height: 100%;
+  width: 15%;
+}
+
+/* 3 columns -- where your blog content is going to go */
+.col1 {
+  background-image: url(../fresh_snow.png);
+  margin: 0;
+  height: 100%;
+  width: 33%;
+  float: left;
+  border: 1px solid purple;
+  display: inline;
+}
+
+
+
+
+
+/* LINKS ON THE RIGHT SIDE OF THE BLOG CONTENT */
+ul {
+  font-family: 'Anton', sans-serif;
+  list-style-type: none;
+  height: 100%;
+  text-align: right;
+  font-size:  25px;
+  margin-top: -5px;
+  font-weight: bolder;
+}
+
+ul li {
+  height: 100%;
+  margin: 0;
+  font-family: 'Anton', sans-serif;
+}
+
+#archive {
+  font-family: 'Quicksand';
+  font-size: 16px;
+}
+
+.col2 {
+  background-image: url(../fresh_snow.png);
+  margin: 0 auto;
+  height: 100%;
+  width: 31%;
+  float: left;
+  display: block;
+
+}
+
+/* this is the column that contains the leftmost links */
+.col-sm-4 {
+  display: block;
+  height: 100%;
+  width: 18%;
+  margin-right: 2%;
+
+}
+
+/* this is the dark black bar in your post box, at the top */
+#blogheading{
+  text-align: center;
+  padding-top: 10px;
+  margin-top: -4%;
+}
+
+/* This styles the content that is inside of your post box */
+
+/* this box contains your entire post, from the heading to the actual content itself */
+.post-preview{
+  margin: 0 2% 0 2%;
+  width: 150%;
+}
+
+.post-writing{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  background-color: white;
+  padding: 13px;
+  margin-top: -23px;
+}
+
+.col3 {
+  background-image: url(../fresh_snow.png);
+  margin: 0;
+  height: 100%;
+  width: 33%;
+  float: right;
+  border: 1px solid red;
+  padding: 0;
+  display: inline;
+}
+
+p#archive-col3{
+  text-align: left;
+  font-family: 'quicksand';
+  font-size: 16px;
+  color: #339999;
+  font-weight: bolder;
+
+}
+
+#greatesthits {
+  list-style-type: none;
+  height: 100%;
+  text-align: left;
+  font-family: 'Anton', sans-serif;
+  font-size:  25px;
+  margin-top: -5px;
+  font-weight: bolder;
+  position: relative;
+  margin-top: -960%;
+
+}
+
+/* this is for the third column */
+.socialmedia img{
+  width: 15%;
+}
+
+.socialmedia a{
+  text-decoration: none;
+}
+
+.socialmedia a:hover{
+  text-decoration: none;
+  color: black;
+}
+
+
+.post {
+  background-color: white;
+}
+
+/* this tag is going to keep the footer at the bottom */
+.clear {
+  clear: both;
+}
+
+
+footer{
+  background-color: black;
+  color: white;
+}
+
+/* for the picture that is in the bio section */
+
+img#biopic {
+  width: 255px;
+  height: auto;
+  text-align: center;
+  margin-left: 24%;
+  display: block;
+  margin-bottom: 5%;
+}
+
+/* MEDIA QUERIES THAT MAKE YOUR SITE LOOK GOOD AT DIFFERENT RESOLUTIONS */
+
+@media screen and (max-width: 767px) {
+  ul {
+    text-align: center;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: 2px;
+  }
+  p#archive-col3{
+    text-align: center;
+  }
+  #greatesthits {
+    text-align: center;
+  }
+
+  .col-xs-12 {
+    width: 55%;
+    margin-left: 22%;
+}
+
+.greatesthits {
+  visibility: collapse;
+  height: 10px;
+}
+
+}

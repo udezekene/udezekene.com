@@ -1,0 +1,122 @@
+@import url(global.less);
+
+
+.main-wrapper{
+  border: 20px solid #fff;
+  min-height: 100vh;
+}
+header{
+  position: relative;
+  ._wrapper{
+    padding-top: 200px;
+    padding-bottom: 100px;
+    .clear;
+    position: relative;
+    z-index: 9;
+
+    .left{
+      h4{
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #fff;
+      }
+      h1{
+        font-weight: 400;
+        font-size: 40px;
+        padding: 10px 0;
+        margin-bottom: 20px;
+        color: @glow-color;
+      }
+      p{
+        font-size: 20px;
+      }
+    }
+  }
+
+  .underlay{
+    background: url(../img/kene.png) no-repeat;
+    background-size: 300px;
+    background-position: right 200px bottom 55%;
+    position: absolute;
+    background-attachment: fixed;
+    .transition;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+}
+
+#works{
+  background: #fff;
+  z-index: 9;
+  
+  ._details{
+    font-size: 16px;
+    h3{
+      color: #000;
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+    p{
+      
+      color: #444;
+    }
+    span{
+      font-size: 16px;
+      display: block;
+      padding: 10px 0;
+    }
+    a{
+      color: #0080FF;
+      text-transform: uppercase;
+      position: relative;
+      display: inline-block;
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: .5px;
+      .transition;
+      &:hover{
+        color: #D34335;
+
+        span{
+          transition-delay:30ms;
+          transform: translateX(5px);
+        }
+      }
+      // padding: 5px 10px;
+      span{
+        .transition;
+        display: inline-block;
+      }
+
+    }
+
+  }
+  .project{
+    .clear;
+    margin-bottom: 70px;
+  }
+  ._image{
+    background: url(../img/browser-bg.png) no-repeat;
+    background-size: 100%;
+    padding-top: 4.5%;
+    .transition;
+    &:hover{
+      box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.12);
+    }
+    figure{
+      position: relative;
+
+    }
+    
+
+    img{
+      width: 100%;
+      border: 1px solid #eaeaea;
+      border-top: none;
+    }
+  }
+}
