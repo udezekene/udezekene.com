@@ -8,7 +8,7 @@
 header{
   position: relative;
   ._wrapper{
-    padding-top: 200px;
+    padding-top: 120px;
     padding-bottom: 100px;
     .clear;
     position: relative;
@@ -30,13 +30,28 @@ header{
       p{
         font-size: 20px;
       }
+      ul{
+        margin-top: 30px;
+        li{
+          display: inline-block;
+          font-size: 20px;
+          margin-right: 20px;
+          a{
+            color: inherit;
+            .transition;
+            &:hover{
+              color: #fff;
+            }
+          }
+        }
+      }
     }
   }
 
   .underlay{
     background: url(../img/kene.png) no-repeat;
     background-size: 300px;
-    background-position: right 200px bottom 55%;
+    background-position: right 200px bottom 60%;
     position: absolute;
     background-attachment: fixed;
     .transition;
@@ -45,6 +60,11 @@ header{
     left: 0;
     bottom: 0;
     width: 100%;
+
+    @media @mobile{
+      background-position: right bottom;
+      opacity: .4 !important;
+    }
   }
 
 }
@@ -117,6 +137,143 @@ header{
       width: 100%;
       border: 1px solid #eaeaea;
       border-top: none;
+    }
+  }
+}
+
+
+footer{
+  padding: 60px 0;
+  
+  &:hover{
+    ._call{
+      p{
+        span{
+          color: #1771D3;
+        }
+      }
+    }
+      
+  }
+  ._call{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+
+    h3{
+      font-size: 30px;
+      padding-bottom: 20px;
+    }
+    p{
+      margin-top: 20px;
+      text-transform: uppercase;
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+      i{
+        margin-right: 5px;
+      }
+      span{
+        display: block;
+        color: #fff;
+        text-transform: none;
+        font-size: 18px;
+        .transition;
+
+      }
+    }
+    >span{
+      color: red;
+    }
+  }
+
+  ._social{
+    display: flex;
+    flex-directio:row;
+    flex-wrap:wrap;
+    flex-basis:25%;
+    align-content:stretch;
+    justify-content:space-between;
+    margin-top: 50px;
+    
+    @media @mobile{
+      padding: 0 10px;
+
+    }
+    >div{
+      flex-grow:1;
+      @media @mobile{
+        width: 50%;
+        margin-bottom: 10px;
+        padding: 0 2px;
+      }
+      &.twitter{
+        i{
+          color: #55ACEE;
+        }
+        &:hover{
+          span{
+            color: #55ACEE;
+          }
+        }
+      }
+      &.medium{
+        i{
+          color: #0BE370;
+        }
+        &:hover{
+          span{
+            color: #0BE370;
+          }
+        }
+      }
+      &.instagram{
+        i{
+          color: #7A50C0;
+        }
+        &:hover{
+          span{
+            color: #7A50C0;
+          }
+        }
+      }
+      &.dribbble{
+        i{
+          color: #EA4C89;
+        }
+        &:hover{
+          span{
+            color: #EA4C89;
+          }
+        }
+      }
+      
+      a{
+        color: inherit;
+        display: block;
+        font-size: 12px;
+        i{
+          font-size: 40px;
+          float: left;
+          margin-right: 10px;
+        }
+        span{
+          display: block;
+          font-size: 16px;
+          line-height: 20px;
+          color: #fff;
+          .transition;
+          font-weight: 400;
+        }
+        @media @mobile{
+          i{
+            margin-right: 5px;
+          }
+          span{
+            font-size: 14px;
+          }
+        }
+      }
     }
   }
 }

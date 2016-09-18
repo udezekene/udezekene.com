@@ -178,7 +178,7 @@ header {
   position: relative;
 }
 header ._wrapper {
-  padding-top: 200px;
+  padding-top: 120px;
   padding-bottom: 100px;
   display: table;
   clear: both;
@@ -201,10 +201,28 @@ header ._wrapper .left h1 {
 header ._wrapper .left p {
   font-size: 20px;
 }
+header ._wrapper .left ul {
+  margin-top: 30px;
+}
+header ._wrapper .left ul li {
+  display: inline-block;
+  font-size: 20px;
+  margin-right: 20px;
+}
+header ._wrapper .left ul li a {
+  color: inherit;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+header ._wrapper .left ul li a:hover {
+  color: #fff;
+}
 header .underlay {
   background: url(../img/kene.png) no-repeat;
   background-size: 300px;
-  background-position: right 200px bottom 55%;
+  background-position: right 200px bottom 60%;
   position: absolute;
   background-attachment: fixed;
   -webkit-transition: all 0.2s ease-in;
@@ -215,6 +233,12 @@ header .underlay {
   left: 0;
   bottom: 0;
   width: 100%;
+}
+@media only screen and (max-width: 529px) {
+  header .underlay {
+    background-position: right bottom;
+    opacity: .4 !important;
+  }
 }
 #works {
   background: #fff;
@@ -288,4 +312,119 @@ header .underlay {
   width: 100%;
   border: 1px solid #eaeaea;
   border-top: none;
+}
+footer {
+  padding: 60px 0;
+}
+footer:hover ._call p span {
+  color: #1771D3;
+}
+footer ._call {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+footer ._call h3 {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+footer ._call p {
+  margin-top: 20px;
+  text-transform: uppercase;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+}
+footer ._call p i {
+  margin-right: 5px;
+}
+footer ._call p span {
+  display: block;
+  color: #fff;
+  text-transform: none;
+  font-size: 18px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+footer ._call > span {
+  color: red;
+}
+footer ._social {
+  display: flex;
+  flex-directio: row;
+  flex-wrap: wrap;
+  flex-basis: 25%;
+  align-content: stretch;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+@media only screen and (max-width: 529px) {
+  footer ._social {
+    padding: 0 10px;
+  }
+}
+footer ._social > div {
+  flex-grow: 1;
+}
+@media only screen and (max-width: 529px) {
+  footer ._social > div {
+    width: 50%;
+    margin-bottom: 10px;
+    padding: 0 2px;
+  }
+}
+footer ._social > div.twitter i {
+  color: #55ACEE;
+}
+footer ._social > div.twitter:hover span {
+  color: #55ACEE;
+}
+footer ._social > div.medium i {
+  color: #0BE370;
+}
+footer ._social > div.medium:hover span {
+  color: #0BE370;
+}
+footer ._social > div.instagram i {
+  color: #7A50C0;
+}
+footer ._social > div.instagram:hover span {
+  color: #7A50C0;
+}
+footer ._social > div.dribbble i {
+  color: #EA4C89;
+}
+footer ._social > div.dribbble:hover span {
+  color: #EA4C89;
+}
+footer ._social > div a {
+  color: inherit;
+  display: block;
+  font-size: 12px;
+}
+footer ._social > div a i {
+  font-size: 40px;
+  float: left;
+  margin-right: 10px;
+}
+footer ._social > div a span {
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  font-weight: 400;
+}
+@media only screen and (max-width: 529px) {
+  footer ._social > div a i {
+    margin-right: 5px;
+  }
+  footer ._social > div a span {
+    font-size: 14px;
+  }
 }
