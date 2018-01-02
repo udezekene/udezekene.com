@@ -9,12 +9,122 @@
 	],
 "creatorBuild": "26148",
 "files": {
+	"\/clearance\/bed.jpg": {
+		"ft": 16384,
+		"iS": 345584,
+		"oA": 0,
+		"oAP": "\/clearance\/bed.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"\/clearance\/blender.jpg": {
+		"ft": 16384,
+		"iS": 436791,
+		"oA": 0,
+		"oAP": "\/clearance\/blender.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"\/clearance\/cabinets.jpg": {
+		"ft": 16384,
+		"iS": 182987,
+		"oA": 0,
+		"oAP": "\/clearance\/cabinets.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"\/clearance\/cabinets2.jpg": {
+		"ft": 16384,
+		"iS": 705263,
+		"oA": 0,
+		"oAP": "\/clearance\/cabinets2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/clearance\/couch.jpg": {
+		"ft": 16384,
+		"iS": 434251,
+		"oA": 0,
+		"oAP": "\/clearance\/couch.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"\/clearance\/fridge1.jpg": {
+		"ft": 16384,
+		"iS": 176544,
+		"oA": 0,
+		"oAP": "\/clearance\/fridge1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"\/clearance\/fridge2.jpg": {
+		"ft": 16384,
+		"iS": 295679,
+		"oA": 0,
+		"oAP": "\/clearance\/fridge2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"\/clearance\/gas1.jpg": {
+		"ft": 16384,
+		"iS": 321018,
+		"oA": 0,
+		"oAP": "\/clearance\/gas1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"\/clearance\/gas2.jpg": {
+		"ft": 16384,
+		"iS": 317776,
+		"oA": 0,
+		"oAP": "\/clearance\/gas2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
 	"\/clearance\/index.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/clearance\/index.html",
 		"oF": 0
+		},
+	"\/clearance\/inverter.jpg": {
+		"ft": 16384,
+		"iS": 107000,
+		"oA": 0,
+		"oAP": "\/clearance\/inverter.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/clearance\/microwave.jpg": {
+		"ft": 16384,
+		"iS": 579274,
+		"oA": 0,
+		"oAP": "\/clearance\/microwave.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
 		},
 	"\/clearance\/no-picture.jpg": {
 		"ft": 16384,
@@ -23,7 +133,7 @@
 		"oAP": "\/clearance\/no-picture.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/clearance\/sm.jpg": {
@@ -33,7 +143,7 @@
 		"oAP": "\/clearance\/sm.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/clearance\/style.css": {
@@ -69,6 +179,16 @@
 		"sI": 0,
 		"sM": 0,
 		"sU": 0
+		},
+	"\/clearance\/wardrobe.jpg": {
+		"ft": 16384,
+		"iS": 202386,
+		"oA": 0,
+		"oAP": "\/clearance\/wardrobe.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/css\/bootstrap.min.css": {
 		"aP": 1,
