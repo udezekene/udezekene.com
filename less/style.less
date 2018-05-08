@@ -1,19 +1,31 @@
 @import url(global.less);
 
 .full{
-  height: 100%;
+  min-height: 100%;
   display: flex;
+
 }
 
 .blurp {
   align-self: center;
   max-width: 65%;
   padding: 40px;
+
+  @media @mobile{
+    max-width: 100%;
+  }
+  @media @tablet {
+    max-width: 80%;    
+  }
   
   p {
     font-size: 1.2em;
     line-height: 1.6;
     margin-bottom: 2em;
+
+    @media @mobile{
+      font-size: 1.1em;
+    }
 
     a{
       color: @glow-color;

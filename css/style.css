@@ -196,6 +196,11 @@ body {
   font-weight: 400;
   background: #fff;
 }
+@media only screen and (max-width: 529px) {
+  body {
+    font-size: 20px;
+  }
+}
 a {
   outline: none;
   text-decoration: none;
@@ -227,7 +232,7 @@ input[type="color"]:focus,
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .full {
-  height: 100%;
+  min-height: 100%;
   display: flex;
 }
 .blurp {
@@ -235,10 +240,25 @@ input[type="color"]:focus,
   max-width: 65%;
   padding: 40px;
 }
+@media only screen and (max-width: 529px) {
+  .blurp {
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 530px) and (max-width: 949px) {
+  .blurp {
+    max-width: 80%;
+  }
+}
 .blurp p {
   font-size: 1.2em;
   line-height: 1.6;
   margin-bottom: 2em;
+}
+@media only screen and (max-width: 529px) {
+  .blurp p {
+    font-size: 1.1em;
+  }
 }
 .blurp p a {
   color: #0069ff;
