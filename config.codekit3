@@ -7,7 +7,7 @@
 		"uuidString": "860883AD-990F-4C4D-8BC8-A5D26CFB3BBD"
 		}
 	],
-"creatorBuild": "26330",
+"creatorBuild": "26680",
 "files": {
 	"\/archive\/2016\/css\/bootstrap.min.css": {
 		"aP": 1,
@@ -195,6 +195,7 @@
 	"\/archive\/2016\/img\/budgit.jpg": {
 		"ft": 16384,
 		"iS": 324455,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/archive\/2016\/img\/budgit.jpg",
 		"oF": 0,
@@ -216,6 +217,7 @@
 	"\/archive\/2016\/img\/oil-report.jpg": {
 		"ft": 16384,
 		"iS": 347446,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/archive\/2016\/img\/oil-report.jpg",
 		"oF": 0,
@@ -226,6 +228,7 @@
 	"\/archive\/2016\/img\/sl-ogp.jpg": {
 		"ft": 16384,
 		"iS": 248002,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/archive\/2016\/img\/sl-ogp.jpg",
 		"oF": 0,
@@ -246,6 +249,7 @@
 	"\/archive\/2016\/img\/social.jpg": {
 		"ft": 16384,
 		"iS": 123450,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/archive\/2016\/img\/social.jpg",
 		"oF": 0,
@@ -256,6 +260,7 @@
 	"\/archive\/2016\/img\/tracka.jpg": {
 		"ft": 16384,
 		"iS": 201272,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/archive\/2016\/img\/tracka.jpg",
 		"oF": 0,
@@ -266,6 +271,7 @@
 	"\/archive\/2016\/img\/truppr.jpg": {
 		"ft": 16384,
 		"iS": 320994,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/archive\/2016\/img\/truppr.jpg",
 		"oF": 0,
@@ -391,6 +397,7 @@
 	"\/clearance\/bed.jpg": {
 		"ft": 16384,
 		"iS": 345584,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/clearance\/bed.jpg",
 		"oF": 0,
@@ -401,6 +408,7 @@
 	"\/clearance\/blender.jpg": {
 		"ft": 16384,
 		"iS": 436791,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/clearance\/blender.jpg",
 		"oF": 0,
@@ -411,6 +419,7 @@
 	"\/clearance\/cabinets.jpg": {
 		"ft": 16384,
 		"iS": 182987,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/clearance\/cabinets.jpg",
 		"oF": 0,
@@ -421,6 +430,7 @@
 	"\/clearance\/cabinets2.jpg": {
 		"ft": 16384,
 		"iS": 705263,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/clearance\/cabinets2.jpg",
 		"oF": 0,
@@ -431,6 +441,7 @@
 	"\/clearance\/couch.jpg": {
 		"ft": 16384,
 		"iS": 434251,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/clearance\/couch.jpg",
 		"oF": 0,
@@ -441,6 +452,7 @@
 	"\/clearance\/fridge1.jpg": {
 		"ft": 16384,
 		"iS": 176544,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/clearance\/fridge1.jpg",
 		"oF": 0,
@@ -451,6 +463,7 @@
 	"\/clearance\/fridge2.jpg": {
 		"ft": 16384,
 		"iS": 295679,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/clearance\/fridge2.jpg",
 		"oF": 0,
@@ -461,6 +474,7 @@
 	"\/clearance\/gas1.jpg": {
 		"ft": 16384,
 		"iS": 321018,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/clearance\/gas1.jpg",
 		"oF": 0,
@@ -471,6 +485,7 @@
 	"\/clearance\/gas2.jpg": {
 		"ft": 16384,
 		"iS": 317776,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/clearance\/gas2.jpg",
 		"oF": 0,
@@ -488,6 +503,7 @@
 	"\/clearance\/inverter.jpg": {
 		"ft": 16384,
 		"iS": 107000,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/clearance\/inverter.jpg",
 		"oF": 0,
@@ -498,6 +514,7 @@
 	"\/clearance\/microwave.jpg": {
 		"ft": 16384,
 		"iS": 579274,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/clearance\/microwave.jpg",
 		"oF": 0,
@@ -508,6 +525,7 @@
 	"\/clearance\/no-picture.jpg": {
 		"ft": 16384,
 		"iS": 11139,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/clearance\/no-picture.jpg",
 		"oF": 0,
@@ -518,6 +536,7 @@
 	"\/clearance\/sm.jpg": {
 		"ft": 16384,
 		"iS": 70285,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/clearance\/sm.jpg",
 		"oF": 0,
@@ -562,6 +581,7 @@
 	"\/clearance\/wardrobe.jpg": {
 		"ft": 16384,
 		"iS": 202386,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/clearance\/wardrobe.jpg",
 		"oF": 0,
@@ -677,7 +697,8 @@
 	"creationDate": 534626559,
 	"displayValue": "udezekene",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-krieger"
+	"iconImageName": "meme-krieger",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2480,6 +2501,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {
