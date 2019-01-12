@@ -449,6 +449,72 @@
 		"opt": 1,
 		"q": 100
 		},
+	"/clearance/d-ac-1.jpeg": {
+		"ft": 16384,
+		"iS": 83918,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/clearance/d-ac-1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/clearance/d-ac-2.jpeg": {
+		"ft": 16384,
+		"iS": 62775,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/clearance/d-ac-2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/clearance/d-gc-1.jpeg": {
+		"ft": 16384,
+		"iS": 103595,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/clearance/d-gc-1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/clearance/d-gc-2.jpeg": {
+		"ft": 16384,
+		"iS": 60252,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/clearance/d-gc-2.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/clearance/d-gc-3.jpeg": {
+		"ft": 16384,
+		"iS": 110196,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/clearance/d-gc-3.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/clearance/d-inverter.jpeg": {
+		"ft": 16384,
+		"iS": 78957,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/clearance/d-inverter.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/clearance/fridge1.jpg": {
 		"ft": 16384,
 		"iS": 176544,
