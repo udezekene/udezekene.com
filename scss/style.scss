@@ -1,1 +1,16 @@
 @import "./header.scss";
+
+.home {
+    border: 1px solid red;
+
+    .container {
+        border: 12px blue;
+
+
+
+    }
+    .row {
+        min-height: 100vh;
+        border: 2px solid purple;
+    }
+}
