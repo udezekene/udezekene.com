@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 $fontfamily: 'Inter', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 
-html {font-size: 112.5%;} /*18px*/
+html {font-size: 112.5%;
+@include phone{
+
+    }
+} /*18px*/
 
 
 p {margin-bottom: 1.15rem; }

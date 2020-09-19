@@ -1,16 +1,33 @@
 @import "./header.scss";
 
 .home {
-    border: 1px solid red;
-
-    .container {
-        border: 12px blue;
-
-
-
+    @include phone {
+        padding: 2rem;
     }
     .row {
         min-height: 100vh;
-        border: 2px solid purple;
+    }
+    .story {
+        @include phone{
+            h3 {
+                font-size: 1.6rem;
+            }
+        }
+    }
+    .links {
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                font-size: 1.2rem;
+                margin-right: 1rem;
+                display: inline-block;
+
+                a{
+                    color: inherit;
+                }
+            }
+        }
+
     }
 }
