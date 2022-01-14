@@ -789,6 +789,87 @@
       "oAP" : "\/css\/style.css.map",
       "oF" : 0
     },
+    "\/favicon.ico" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/favicon.ico",
+      "oF" : 0
+    },
+    "\/img\/android-chrome-192x192.png" : {
+      "ft" : 32768,
+      "iS" : 5956,
+      "oA" : 0,
+      "oAP" : "\/img\/android-chrome-192x192.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/img\/android-chrome-512x512.png" : {
+      "ft" : 32768,
+      "iS" : 22523,
+      "oA" : 0,
+      "oAP" : "\/img\/android-chrome-512x512.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/img\/apple-touch-icon.png" : {
+      "ft" : 32768,
+      "iS" : 5487,
+      "oA" : 0,
+      "oAP" : "\/img\/apple-touch-icon.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/img\/favicon-16x16.png" : {
+      "ft" : 32768,
+      "iS" : 389,
+      "oA" : 0,
+      "oAP" : "\/img\/favicon-16x16.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/img\/favicon-32x32.png" : {
+      "ft" : 32768,
+      "iS" : 759,
+      "oA" : 0,
+      "oAP" : "\/img\/favicon-32x32.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/img\/site.webmanifest" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/img\/site.webmanifest",
+      "oF" : 0
+    },
     "\/index.html" : {
       "cB" : 0,
       "ft" : 8192,
@@ -805,15 +886,15 @@
       "oAP" : "\/LICENSE",
       "oF" : 0
     },
-    "\/meta.png" : {
-      "ft" : 32768,
-      "iS" : 15303,
+    "\/meta.jpg" : {
+      "ft" : 16384,
+      "iS" : 34351,
+      "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/meta.png",
+      "oAP" : "\/meta.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
-      "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
@@ -911,7 +992,7 @@
     "creationDate" : 534626559,
     "displayValue" : "udezekene.com",
     "displayValueWasSetByUser" : 0,
-    "iconImageName" : "meme-krieger",
+    "iconImageName" : "\/img\/apple-touch-icon.png",
     "iconImageWasSetByUser" : 0
   },
   "projectSettings" : {
