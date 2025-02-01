@@ -1,0 +1,75 @@
+@use "../abstracts/variables" as vars;
+@use "sass:map";
+
+/**
+ * SPACING UTILTIY
+ * 
+ * Direct classes for specific properties (e.g., .util-m-8, .util-padding-top-4)
+ * CSS variable reference (e.g., var(--util-space-8)) for custom use
+ */
+
+// Properties map for generating utilities
+$properties: (
+  margin: (
+    base: margin,
+    sides: (top, right, bottom, left)
+  ),
+  padding: (
+    base: padding,
+    sides: (top, right, bottom, left)
+  )
+);
+
+// Generate spacing value utilities
+@each $space-key, $space-value in $spacing-scale {
+  .util-spacing-#{$space-key} {
+    --spacing: #{$space-value}rem;
+  }
+}
+
+// Generate property utilities
+@each $prop-key, $prop-data in $properties {
+  $base: map.get($prop-data, "base");
+  $sides: map.get($prop-data, "sides");
+
+  // Generate utilities for each spacing value
+  @each $space-key, $space-value in $spacing-scale {
+    // Full property utility
+    .util-#{str-slice($base, 1, 1)}-#{$space-key} {
+      #{$base}: #{$space-value}rem;
+    }
+
+    // Individual sides
+    @each $side in $sides {
+      .util-#{$base}-#{$side}-#{$space-key} {
+        #{$base}-#{$side}: #{$space-value}rem;
+      }
+    }
+
+    // X-axis utility
+    .util-#{$base}-x-#{$space-key} {
+      #{$base}-left: #{$space-value}rem;
+      #{$base}-right: #{$space-value}rem;
+    }
+
+    // Y-axis utility
+    .util-#{$base}-y-#{$space-key} {
+      #{$base}-top: #{$space-value}rem;
+      #{$base}-bottom: #{$space-value}rem;
+    }
+  }
+}
+
+// Generate gap utilities
+@each $space-key, $space-value in $spacing-scale {
+  .util-gap-#{$space-key} {
+    gap: #{$space-value}rem;
+  }
+}
+
+// CSS Custom Properties for reusability
+:root {
+  @each $space-key, $space-value in $spacing-scale {
+    --util-space-#{$space-key}: #{$space-value}rem;
+  }
+}

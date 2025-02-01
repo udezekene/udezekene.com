@@ -1,0 +1,292 @@
+@use "sass:math" as math;
+@use "sass:map" as map;
+
+/**
+ * SPACING UTILTIY
+ * 
+ * Direct classes for specific properties (e.g., .util-m-8, .util-padding-top-4)
+ * CSS variable reference (e.g., var(--util-space-8)) for custom use
+ */
+
+// Base spacing values in REMs (16px base)
+$spacing-scale: (
+  0: 0,
+  1: 0.125,   // 2px
+  2: 0.25,    // 4px
+  4: 0.5,     // 8px
+  8: 1,       // 16px
+  12: 1.5,    // 24px
+  16: 2,      // 32px
+  24: 3,      // 48px
+  32: 4,      // 64px
+  48: 6,      // 96px
+  64: 8       // 128px
+);
+
+// Properties map for generating utilities
+$properties: (
+  margin: (
+    base: margin,
+    sides: (top, right, bottom, left)
+  ),
+  padding: (
+    base: padding,
+    sides: (top, right, bottom, left)
+  )
+);
+
+// Generate spacing value utilities
+@each $space-key, $space-value in $spacing-scale {
+  .util-spacing-#{$space-key} {
+    --spacing: #{$space-value}rem;
+  }
+}
+
+// Generate property utilities
+@each $prop-key, $prop-data in $properties {
+  $base: map.get($prop-data, "base");
+  $sides: map.get($prop-data, "sides");
+
+  // Generate utilities for each spacing value
+  @each $space-key, $space-value in $spacing-scale {
+    // Full property utility
+    .util-#{str-slice($base, 1, 1)}-#{$space-key} {
+      #{$base}: #{$space-value}rem;
+    }
+
+    // Individual sides
+    @each $side in $sides {
+      .util-#{$base}-#{$side}-#{$space-key} {
+        #{$base}-#{$side}: #{$space-value}rem;
+      }
+    }
+
+    // X-axis utility
+    .util-#{$base}-x-#{$space-key} {
+      #{$base}-left: #{$space-value}rem;
+      #{$base}-right: #{$space-value}rem;
+    }
+
+    // Y-axis utility
+    .util-#{$base}-y-#{$space-key} {
+      #{$base}-top: #{$space-value}rem;
+      #{$base}-bottom: #{$space-value}rem;
+    }
+  }
+}
+
+// Generate gap utilities
+@each $space-key, $space-value in $spacing-scale {
+  .util-gap-#{$space-key} {
+    gap: #{$space-value}rem;
+  }
+}
+
+// CSS Custom Properties for reusability
+:root {
+  @each $space-key, $space-value in $spacing-scale {
+    --util-space-#{$space-key}: #{$space-value}rem;
+  }
+}
+
+/** TYPOGRAPHY
+ *  Utility for generating the fluid typohraphy elements
+ */
+
+// Fluid Typography Functions
+@function strip-unit($value) {
+    @if type-of($value) == "number" and not unitless($value) {
+      @return $value / ($value * 0 + 1);
+    }
+    @return $value;
+  }
+  
+  @function fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+    $min-vw: strip-unit($min-vw);
+    $max-vw: strip-unit($max-vw);
+    $min-font-size: strip-unit($min-font-size);
+    $max-font-size: strip-unit($max-font-size);
+  
+    // Calculate the slope
+    $slope: ($max-font-size - $min-font-size) / ($max-vw - $min-vw);
+    // Calculate the y-intercept
+    $y-intercept: $min-font-size - $slope * $min-vw;
+    
+    // Convert slope to vw units
+    $slope-vw: $slope * 100;
+    
+    @return clamp(#{$min-font-size}rem, #{$y-intercept}rem + #{$slope-vw}vw, #{$max-font-size}rem);
+  }
+  
+  // Configuration
+  $min-viewport: 20;   // 320px
+  $max-viewport: 75;   // 1200px
+  
+  // Font Size Scale with unitless values
+  $font-sizes: (
+    -2: (0.64, 0.8),
+    -1: (0.8, 1),
+    0: (1, 1.25),
+    1: (1.25, 1.5625),
+    2: (1.5625, 1.9531),
+    3: (1.9531, 2.4414),
+    4: (2.4414, 3.0518),
+    5: (3.0518, 3.8147),
+    6: (3.8147, 4.7684)
+  );
+  
+  // Generate fluid font sizes
+  $fluid-sizes: ();
+  @each $step, $sizes in $font-sizes {
+    $min: nth($sizes, 1);
+    $max: nth($sizes, 2);
+    
+    $fluid-sizes: map-merge(
+      $fluid-sizes, 
+      (#{$step}: fluid-type($min-viewport, $max-viewport, $min, $max))
+    );
+  }
+  
+  // Store computed values in CSS custom properties
+  :root {
+    @each $step, $value in $fluid-sizes {
+      --util--fs-step-#{$step}: #{$value};
+    }
+  }
+  
+  // Fluid Line Heights (based on 8px grid)
+  $line-heights: (
+    -2: (1, 1.25),      // 16px - 20px
+    -1: (1, 1.25),      // 16px - 20px
+    0: (1.25, 1.5),     // 20px - 24px
+    1: (1.5, 1.75),     // 24px - 28px
+    2: (1.75, 2),       // 28px - 32px
+    3: (2, 2.25),       // 32px - 36px
+    4: (2.25, 2.5),     // 36px - 40px
+    5: (2.5, 2.75),     // 40px - 44px
+    6: (2.75, 3)        // 44px - 48px
+  );
+  
+  // Generate fluid line heights
+  $fluid-line-heights: ();
+  @each $step, $heights in $line-heights {
+    $min: nth($heights, 1);
+    $max: nth($heights, 2);
+    
+    $fluid-line-heights: map-merge(
+      $fluid-line-heights, 
+      (#{$step}: fluid-type($min-viewport, $max-viewport, $min, $max))
+    );
+  }
+  
+  // Store line height values in CSS custom properties
+  :root {
+    @each $step, $value in $fluid-line-heights {
+      --util--lh-step-#{$step}: #{$value};
+    }
+  }
+  
+  // Generate utility classes for both font-size and line-height
+  @each $step in map-keys($font-sizes) {
+    // Font size utilities
+    .util-fs-#{$step} {
+      font-size: var(--util--fs-step-#{$step});
+    }
+    
+    // Line height utilities
+    .util-lh-#{$step} {
+      line-height: var(--util--lh-step-#{$step});
+    }
+    
+    // Combined utilities
+    .util-type-#{$step} {
+      font-size: var(--util--fs-step-#{$step});
+      line-height: var(--util--lh-step-#{$step});
+    }
+  }
+
+
+  /** 
+   * BREAKPOINT MIXINS
+   * 
+   * Usage examples
+   *
+   * @include phone { padding: 1rem; }
+   * @include tablet-only {border: 1px solid #ccc; }
+   */
+
+
+// Breakpoint Map
+$breakpoints: (
+  phone: 320px,
+  tablet: 768px,
+  desktop: 1024px,
+  wide: 1440px
+);
+
+// Device Pixel Ratio for Retina
+$retina: "(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)";
+
+// phone specific (320px and up)
+@mixin phone {
+  @media (min-width: map.get($breakpoints, phone)) {
+    @content;
+  }
+}
+
+// Tablet and up (includes retina by default)
+@mixin tablet {
+  @media (min-width: map.get($breakpoints, tablet)), 
+         (min-width: map.get($breakpoints, tablet)) and #{$retina} {
+    @content;
+  }
+}
+
+// Desktop and up (includes retina by default)
+@mixin desktop {
+  @media (min-width: map.get($breakpoints, desktop)),
+         (min-width: map.get($breakpoints, desktop)) and #{$retina} {
+    @content;
+  }
+}
+
+// Wide desktop and up (includes retina by default)
+@mixin wide {
+  @media (min-width: map.get($breakpoints, wide)),
+         (min-width: map.get($breakpoints, wide)) and #{$retina} {
+    @content;
+  }
+}
+
+// Optional: Non-retina specific mixins if needed
+@mixin tablet-only {
+  @media (min-width: map.get($breakpoints, tablet)) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media (min-width: map.get($breakpoints, desktop)) {
+    @content;
+  }
+}
+
+@mixin wide-only {
+  @media (min-width: map.get($breakpoints, wide)) {
+    @content;
+  }
+}
+
+// Custom breakpoint with optional retina
+@mixin breakpoint($size, $high-dpi: true) {
+  @if $high-dpi {
+    @media (min-width: $size),
+           (min-width: $size) and #{$retina} {
+      @content;
+    }
+  } @else {
+    @media (min-width: $size) {
+      @content;
+    }
+  }
+}

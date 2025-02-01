@@ -1,0 +1,35 @@
+/**
+ * Base Spacing Values
+ * In REM (16px) base
+ * 
+ */
+
+$spacing-scale: (
+  0: 0,
+  1: 0.125,   // 2px
+  2: 0.25,    // 4px
+  4: 0.5,     // 8px
+  8: 1,       // 16px
+  12: 1.5,    // 24px
+  16: 2,      // 32px
+  24: 3,      // 48px
+  32: 4,      // 64px
+  48: 6,      // 96px
+  64: 8       // 128px
+);
+
+
+/**
+ * Breakpoints Mapping
+ * 
+ */
+
+$breakpoints: (
+    phone: 320px,
+    tablet: 768px,
+    desktop: 1024px,
+    wide: 1440px
+);
+
+// Device Pixel Ratio for Retina
+$device-retina: "(min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2)";

@@ -1,0 +1,30 @@
+/* 
+
+    COLORS
+    https://coolors.co/262b26-3a413a-707070-999999-5dd9c1
+
+*/
+
+// base colors
+// https://coolors.co/262b26-3a413a-707070-8f8f8f
+
+// Almost black
+$black-olive--0:#3A413A;
+$black-olive--1:#3c433c;
+
+//Gray
+$gray--0:#707070;
+$gray--1:#8F8F8F;
+
+
+//Whites
+$white--0: #f9f9f9;
+$white--1: #ffffff;
+
+// Colors with function
+
+$color-background:$white--0;
+$color-text:$black-olive--1;
+$color-text-subtle:$gray--1;
+$color-link:$black-olive--0;
+

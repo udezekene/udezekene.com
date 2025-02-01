@@ -1,0 +1,116 @@
+@use "../abstracts/index";
+@use "sass:math" as math;
+
+
+// Fluid Typography Functions
+@function strip-unit($value) {
+  @if type-of($value) == "number" and not unitless($value) {
+    @return $value / ($value * 0 + 1);
+  }
+  @return $value;
+}
+
+@function fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $min-vw: strip-unit($min-vw);
+  $max-vw: strip-unit($max-vw);
+  $min-font-size: strip-unit($min-font-size);
+  $max-font-size: strip-unit($max-font-size);
+
+  // Calculate the slope
+  $slope: ($max-font-size - $min-font-size) / ($max-vw - $min-vw);
+  // Calculate the y-intercept
+  $y-intercept: $min-font-size - $slope * $min-vw;
+  
+  // Convert slope to vw units
+  $slope-vw: $slope * 100;
+  
+  @return clamp(#{$min-font-size}rem, #{$y-intercept}rem + #{$slope-vw}vw, #{$max-font-size}rem);
+}
+
+// Configuration
+$min-viewport: 20;   // 320px
+$max-viewport: 75;   // 1200px
+
+// Font Size Scale with unitless values
+$font-sizes: (
+  -2: (0.64, 0.8),
+  -1: (0.8, 1),
+  0: (1, 1.25),
+  1: (1.25, 1.5625),
+  2: (1.5625, 1.9531),
+  3: (1.9531, 2.4414),
+  4: (2.4414, 3.0518),
+  5: (3.0518, 3.8147),
+  6: (3.8147, 4.7684)
+);
+
+// Line Heights Scale (based on 8px grid)
+$line-heights: (
+  -2: (1, 1.25),      // 16px - 20px
+  -1: (1, 1.25),      // 16px - 20px
+  0: (1.25, 1.5),     // 20px - 24px
+  1: (1.5, 1.75),     // 24px - 28px
+  2: (1.75, 2),       // 28px - 32px
+  3: (2, 2.25),       // 32px - 36px
+  4: (2.25, 2.5),     // 36px - 40px
+  5: (2.5, 2.75),     // 40px - 44px
+  6: (2.75, 3)        // 44px - 48px
+);
+
+// Generate fluid values and store in CSS custom properties
+:root {
+  @each $step, $sizes in $font-sizes {
+    $min: nth($sizes, 1);
+    $max: nth($sizes, 2);
+    --util--fs-step-#{$step}: #{fluid-type($min-viewport, $max-viewport, $min, $max)};
+  }
+
+  @each $step, $heights in $line-heights {
+    $min: nth($heights, 1);
+    $max: nth($heights, 2);
+    --util--lh-step-#{$step}: #{fluid-type($min-viewport, $max-viewport, $min, $max)};
+  }
+}
+
+// Generate placeholder selectors for font-size
+@each $step in map-keys($font-sizes) {
+  %util-fs-#{$step} {
+    font-size: var(--util--fs-step-#{$step});
+  }
+}
+
+// Generate placeholder selectors for line-height
+@each $step in map-keys($line-heights) {
+  %util-lh-#{$step} {
+    line-height: var(--util--lh-step-#{$step});
+  }
+}
+
+// Generate placeholder selectors for combined type styles
+@each $step in map-keys($font-sizes) {
+  %util-type-#{$step} {
+    font-size: var(--util--fs-step-#{$step});
+    line-height: var(--util--lh-step-#{$step});
+  }
+}
+
+// Generate actual utility classes for font-size
+@each $step in map-keys($font-sizes) {
+  .util-fs-#{$step} {
+    @extend %util-fs-#{$step};
+  }
+}
+
+// Generate actual utility classes for line-height
+@each $step in map-keys($line-heights) {
+  .util-lh-#{$step} {
+    @extend %util-lh-#{$step};
+  }
+}
+
+// Generate actual utility classes for combined type styles
+@each $step in map-keys($font-sizes) {
+  .util-type-#{$step} {
+    @extend %util-type-#{$step};
+  }
+}

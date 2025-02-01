@@ -1,0 +1,55 @@
+@use "../font/pretended/pretendard.css";
+@use "utilties" as const;
+
+$font-family: 'Pretended', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+
+html {
+  font-size: 100%;
+  
+}
+
+/** 
+  Typesetting the recurring the
+*/
+
+.type--font-display {
+  @extend .util-type-5;
+  line-height: 1.1;
+  font-weight: 500;
+}
+.type--font-display-large {
+  font-size: var(--util--fs-step-5);
+  line-height: 1.14;
+  font-weight: 400;
+  letter-spacing: -0.14rem;
+}
+
+p {
+  margin-bottom: 1.15rem; 
+
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+
+
+h1 {
+  font-size: var(--util--fs-step-5);
+  line-height: 1.35;
+}
+
+h2 {font-size: 2.441em;}
+
+h3 {font-size: 1.953em;}
+
+h4 {font-size: 1.563em;}
+
+h5 {font-size: 1.25em;}
+
+small, .text_small {font-size: 0.8em;}
+
