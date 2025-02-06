@@ -1,0 +1,48 @@
+// CSS Variables (for browser styling)
+:root {
+    --primary-background-color: #f0f0f0;
+    --primary-text-color: #333;
+    --base-font: sans-serif;
+    --primary-color: #007bff;
+
+
+
+    // Colors
+    // https://coolors.co/262b26-3a413a-707070-8f8f8f
+
+    --color-black-olive--0:#3A413A;
+    --color-black-olive--1:#3C433C;
+
+    --color-gray--0:#707070;
+    --color-gray--1:#8F8F8F;
+
+    --color-white--0:#F9F9F9;
+    --color-white--1:#ffffff;
+
+
+    //Colors applied
+    --color-background:var(--color-white--0);
+    --color-type:var(--color-black-olive--0);
+    --color-type-subtle:var(--color-gray--0);
+
+    // Fonts
+    // https://coolors.co/262b26-3a413a-707070-8f8f8f
+
+    --font-primary: 'Pretended', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    --font-secondary: 'Pretended', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+
+    //Font Sizes
+    // https://www.fluid-type-scale.com/calculate?minFontSize=16&minWidth=320&minRatio=1.25&maxFontSize=19&maxWidth=1440&maxRatio=1.33&steps=-2%2C+-1%2C+0%2C1%2C2%2C3%2C4%2C5%2C6&baseStep=0&prefix=fs&useContainerWidth=false&includeFallbacks=false&useRems=true&remValue=16&decimals=2&previewFont=Inter&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground&previewWidth=320
+     
+    --fs--2: clamp(0.64rem, 0.04vi + 0.63rem, 0.67rem);
+    --fs--1: clamp(0.8rem, 0.13vi + 0.77rem, 0.89rem);
+    --fs-0: clamp(1rem, 0.27vi + 0.95rem, 1.19rem);
+    --fs-1: clamp(1.25rem, 0.47vi + 1.16rem, 1.58rem);
+    --fs-2: clamp(1.56rem, 0.77vi + 1.41rem, 2.1rem);
+    --fs-3: clamp(1.95rem, 1.2vi + 1.71rem, 2.79rem);
+    --fs-4: clamp(2.44rem, 1.82vi + 2.08rem, 3.72rem);
+    --fs-5: clamp(3.05rem, 2.7vi + 2.51rem, 4.94rem);
+    --fs-6: clamp(3.81rem, 3.94vi + 3.03rem, 6.57rem);
+}
+
+

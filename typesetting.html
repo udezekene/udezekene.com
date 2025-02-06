@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Typography Scale Test</title>
+    <style>
+        /* Import your typography utilities */
+        @use '../util/typography' as type;
+
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Type examples */
+        .type-example {
+            margin-bottom: 2rem;
+            position: relative;
+            border: 1px solid #eee;
+            padding: 1rem;
+        }
+
+        .label {
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+            font-family: monospace;
+        }
+
+        .text {
+            position: relative;
+            background: rgba(0, 0, 255, 0.05);
+            padding: 1rem;
+            margin: 0;
+        }
+
+        /* Baseline marker */
+        .baseline-marker {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-bottom: 1px dashed rgba(255, 0, 0, 0.3);
+        }
+
+        /* 8pt Grid Overlay */
+        .grid-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .grid-overlay.visible {
+            display: block;
+        }
+
+        .grid-overlay::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: repeating-linear-gradient(
+                to bottom,
+                rgba(0, 0, 255, 0.1),
+                rgba(0, 0, 255, 0.1) 1px,
+                transparent 1px,
+                transparent 8px
+            );
+        }
+
+        /* Grid Toggle Button */
+        .grid-toggle {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            padding: 0.5rem 1rem;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .grid-toggle:hover {
+            background: #444;
+        }
+
+        /* Viewport Size Indicator */
+        .viewport-size {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background: #333;
+            color: white;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="viewport-size"></div>
+    <div class="container">
+        <h1>Typography Scale Test</h1>
+        
+        <div class="type-test">
+            <!-- Step -2 -->
+            <div class="type-example">
+                <div class="label">Step -2 (0.64rem - 0.8rem)</div>
+                <div class="text util--fs-step--2">
+                    The quick brown fox jumps over the lazy dog
+                    <span class="baseline-marker"></span>
+                </div>
+            </div>
+
+            <!-- Step -1 -->
+            <div class="type-example">
+                <div class="label">Step -1 (0.8rem - 1rem)</div>
+                <div class="text util--fs-step--1">
+                    The quick brown fox jumps over the lazy dog
+                    <span class="baseline-marker"></span>
+                </div>
+            </div>
+
+            <!-- Step 0 -->
+            <div class="type-example">
+                <div class="label">Step 0 (1rem - 1.25rem)</div>
+                <div class="text util--fs-step-0">
+                    The quick brown fox jumps over the lazy dog
+                    <span class="baseline-marker"></span>
+                </div>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="type-example">
+                <div class="label">Step 1 (1.25rem - 1.5625rem)</div>
+                <div class="text util--fs-step-1">
+                    The quick brown fox jumps over the lazy dog
+                    <span class="baseline-marker"></span>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="type-example">
+                <div class="label">Step 2 (1.5625rem - 1.9531rem)</div>
+                <div class="text util--fs-step-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+                    <span class="baseline-marker"></span>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="type-example">
+                <div class="label">Step 3 (1.9531rem - 2.4414rem)</div>
+                <div class="text util--fs-step-3">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <span class="baseline-marker"></span>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="type-example">
+                <div class="label">Step 4 (2.4414rem - 3.0518rem)</div>
+                <div class="text util--fs-step-4">
+                    Typography Scale Test
+                    <span class="baseline-marker"></span>
+                </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="type-example">
+                <div class="label">Step 5 (3.0518rem - 3.8147rem)</div>
+                <div class="text util--fs-step-5">
+                    Large Headings
+                    <span class="baseline-marker"></span>
+                </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="type-example">
+                <div class="label">Step 6 (3.8147rem - 4.7684rem)</div>
+                <div class="text util--fs-step-6">
+                    Display
+                    <span class="baseline-marker"></span>
+                </div>
+            </div>
+            <div class="type-example">
+                <div class="text util--fs-step--2">
+                    <p>In my current role @ <a href="http://booking.com/" target="_blank">Booking.com</a>, I help design systems and tools that help our commercial partners meet their goals & unlock value for their users.  Previously, I led design @ <a href="http://cchubnigeria.com/" target="_blank">CcHUB</a> and collaborated with organizations across diverse industries to deliver some high impact projects. </p>
+                    <p>Beyond my day job, I am actively working to accelerate design education in Africa through projects such as <a href="#" target="_blank">ForHumansByHumans</a>, <a href="#" target="_blank">Usable</a>, and hosting <a href="https://www.whenwe.design/" target="_blank">WhenWeDesign</a> - a podcast exploring how businesses apply design for scale in Africa.</p>
+                <span class="baseline-marker"></span>
+                </div>
+            </div>
+            <div class="type-example">
+                <div class="text util--fs-step--1">
+                    <p>In my current role @ <a href="http://booking.com/" target="_blank">Booking.com</a>, I help design systems and tools that help our commercial partners meet their goals & unlock value for their users.  Previously, I led design @ <a href="http://cchubnigeria.com/" target="_blank">CcHUB</a> and collaborated with organizations across diverse industries to deliver some high impact projects. </p>
+                    <p>Beyond my day job, I am actively working to accelerate design education in Africa through projects such as <a href="#" target="_blank">ForHumansByHumans</a>, <a href="#" target="_blank">Usable</a>, and hosting <a href="https://www.whenwe.design/" target="_blank">WhenWeDesign</a> - a podcast exploring how businesses apply design for scale in Africa.</p>
+                <span class="baseline-marker"></span>
+                </div>
+            </div>
+            <div class="type-example">
+                <div class="text util--fs-step-1">
+                    <p>In my current role @ <a href="http://booking.com/" target="_blank">Booking.com</a>, I help design systems and tools that help our commercial partners meet their goals & unlock value for their users.  Previously, I led design @ <a href="http://cchubnigeria.com/" target="_blank">CcHUB</a> and collaborated with organizations across diverse industries to deliver some high impact projects. </p>
+                    <p>Beyond my day job, I am actively working to accelerate design education in Africa through projects such as <a href="#" target="_blank">ForHumansByHumans</a>, <a href="#" target="_blank">Usable</a>, and hosting <a href="https://www.whenwe.design/" target="_blank">WhenWeDesign</a> - a podcast exploring how businesses apply design for scale in Africa.</p>
+                <span class="baseline-marker"></span>
+                </div>
+            </div>
+            <div class="type-example">
+                <div class="text util--fs-step-2">
+                    <p>In my current role @ <a href="http://booking.com/" target="_blank">Booking.com</a>, I help design systems and tools that help our commercial partners meet their goals & unlock value for their users.  Previously, I led design @ <a href="http://cchubnigeria.com/" target="_blank">CcHUB</a> and collaborated with organizations across diverse industries to deliver some high impact projects. </p>
+                    <p>Beyond my day job, I am actively working to accelerate design education in Africa through projects such as <a href="#" target="_blank">ForHumansByHumans</a>, <a href="#" target="_blank">Usable</a>, and hosting <a href="https://www.whenwe.design/" target="_blank">WhenWeDesign</a> - a podcast exploring how businesses apply design for scale in Africa.</p>
+                <span class="baseline-marker"></span>
+                </div>
+            </div>
+            <div class="type-example">
+                <div class="text util--fs-step-3">
+                    <p>In my current role @ <a href="http://booking.com/" target="_blank">Booking.com</a>, I help design systems and tools that help our commercial partners meet their goals & unlock value for their users.  Previously, I led design @ <a href="http://cchubnigeria.com/" target="_blank">CcHUB</a> and collaborated with organizations across diverse industries to deliver some high impact projects. </p>
+                    <p>Beyond my day job, I am actively working to accelerate design education in Africa through projects such as <a href="#" target="_blank">ForHumansByHumans</a>, <a href="#" target="_blank">Usable</a>, and hosting <a href="https://www.whenwe.design/" target="_blank">WhenWeDesign</a> - a podcast exploring how businesses apply design for scale in Africa.</p>
+                <span class="baseline-marker"></span>
+                </div>
+            </div>
+            <div class="type-example">
+                <div class="text util--fs-step-4">
+                    <p>In my current role @ <a href="http://booking.com/" target="_blank">Booking.com</a>, I help design systems and tools that help our commercial partners meet their goals & unlock value for their users.  Previously, I led design @ <a href="http://cchubnigeria.com/" target="_blank">CcHUB</a> and collaborated with organizations across diverse industries to deliver some high impact projects. </p>
+                    <p>Beyond my day job, I am actively working to accelerate design education in Africa through projects such as <a href="#" target="_blank">ForHumansByHumans</a>, <a href="#" target="_blank">Usable</a>, and hosting <a href="https://www.whenwe.design/" target="_blank">WhenWeDesign</a> - a podcast exploring how businesses apply design for scale in Africa.</p>
+                <span class="baseline-marker"></span>
+                </div>
+            </div>
+
+
+            <div class="type-example">
+                <div class="text util--fs-step-5">
+                    <p>In my current role @ <a href="http://booking.com/" target="_blank">Booking.com</a>, I help design systems and tools that help our commercial partners meet their goals & unlock value for their users.  Previously, I led design @ <a href="http://cchubnigeria.com/" target="_blank">CcHUB</a> and collaborated with organizations across diverse industries to deliver some high impact projects. </p>
+                    <p>Beyond my day job, I am actively working to accelerate design education in Africa through projects such as <a href="#" target="_blank">ForHumansByHumans</a>, <a href="#" target="_blank">Usable</a>, and hosting <a href="https://www.whenwe.design/" target="_blank">WhenWeDesign</a> - a podcast exploring how businesses apply design for scale in Africa.</p>
+                <span class="baseline-marker"></span>
+                </div>
+            </div>
+
+
+
+            <div class="text util--fs-step-6">
+                <p>In my current role @ <a href="http://booking.com/" target="_blank">Booking.com</a>, I help design systems and tools that help our commercial partners meet their goals & unlock value for their users.  Previously, I led design @ <a href="http://cchubnigeria.com/" target="_blank">CcHUB</a> and collaborated with organizations across diverse industries to deliver some high impact projects. </p>
+                <p>Beyond my day job, I am actively working to accelerate design education in Africa through projects such as <a href="#" target="_blank">ForHumansByHumans</a>, <a href="#" target="_blank">Usable</a>, and hosting <a href="https://www.whenwe.design/" target="_blank">WhenWeDesign</a> - a podcast exploring how businesses apply design for scale in Africa.</p>
+            <span class="baseline-marker"></span>
+            </div>
+
+
+        </div>
+
+        <button class="grid-toggle">Toggle 8pt Grid</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Create grid overlay
+            const gridOverlay = document.createElement('div');
+            gridOverlay.className = 'grid-overlay';
+            document.body.appendChild(gridOverlay);
+
+            // Toggle grid on button click
+            const gridToggle = document.querySelector('.grid-toggle');
+            gridToggle.addEventListener('click', () => {
+                gridOverlay.classList.toggle('visible');
+            });
+
+            // Add viewport size indicator
+            const viewportSize = document.querySelector('.viewport-size');
+            const updateViewportSize = () => {
+                viewportSize.textContent = `${window.innerWidth}px × ${window.innerHeight}px`;
+            };
+            window.addEventListener('resize', updateViewportSize);
+            updateViewportSize();
+
+            // Add resize observer to update baseline markers
+            const updateBaselineMarkers = () => {
+                document.querySelectorAll('.text').forEach(text => {
+                    const marker = text.querySelector('.baseline-marker');
+                    const lineHeight = parseInt(window.getComputedStyle(text).lineHeight);
+                    marker.style.bottom = `${lineHeight % 8}px`;
+                });
+            };
+
+            const resizeObserver = new ResizeObserver(updateBaselineMarkers);
+            document.querySelectorAll('.text').forEach(text => {
+                resizeObserver.observe(text);
+            });
+            
+            // Initial update
+            updateBaselineMarkers();
+        });
+    </script>
+</body>
+</html>

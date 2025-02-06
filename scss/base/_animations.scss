@@ -1,0 +1,16 @@
+@use "variables"; // Animations might use variables for colors, timings, etc.
+
+// Your animation styles (example)
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+  background-color: var(--primary-background-color); // Using a CSS variable
+}

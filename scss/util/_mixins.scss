@@ -1,0 +1,52 @@
+/* Device Breakpoints
+========================================================================== */
+@use "sass:map" as map;
+
+// Breakpoint Map
+$breakpoints: (
+  mobile: 320px,
+  tablet: 768px,
+  desktop: 1024px,
+  wide: 1440px
+);
+
+// Mobile only (below tablet)
+@mixin mobile {
+  @media (max-width: map.get($breakpoints, tablet) - 1) {
+    @content;
+  }
+}
+
+// Tablet only (between tablet and desktop)
+@mixin tablet {
+  @media (min-width: map.get($breakpoints, tablet)) and (max-width: map.get($breakpoints, desktop) - 1) {
+    @content;
+  }
+}
+
+// Desktop only (between desktop and wide)
+@mixin desktop {
+  @media (min-width: map.get($breakpoints, desktop)) and (max-width: map.get($breakpoints, wide) - 1) {
+    @content;
+  }
+}
+
+// Wide only (wide and up)
+@mixin wide {
+  @media (min-width: map.get($breakpoints, wide)) {
+    @content;
+  }
+}
+
+// Custom breakpoint for a specific size
+@mixin breakpoint($min, $max: null) {
+  @if $max {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $min) {
+      @content;
+    }
+  }
+}

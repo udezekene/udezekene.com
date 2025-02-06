@@ -1,0 +1,98 @@
+@use "sass:math";
+@use "sass:map";
+
+// Configuration
+$min-viewport: 320px;
+$max-viewport: 1440px;
+
+// Type scale configuration
+$type-scale: (
+  "-2": (
+    min-size: 0.64rem,
+    max-size: 0.8rem
+  ),
+  "-1": (
+    min-size: 0.8rem,
+    max-size: 1rem
+  ),
+  "0": (
+    min-size: 1rem,
+    max-size: 1.25rem
+  ),
+  "1": (
+    min-size: 1.25rem,
+    max-size: 1.5625rem
+  ),
+  "2": (
+    min-size: 1.5625rem,
+    max-size: 1.9531rem
+  ),
+  "3": (
+    min-size: 1.9531rem,
+    max-size: 2.4414rem
+  ),
+  "4": (
+    min-size: 2.4414rem,
+    max-size: 3.0518rem
+  ),
+  "5": (
+    min-size: 3.0518rem,
+    max-size: 3.8147rem
+  ),
+  "6": (
+    min-size: 3.8147rem,
+    max-size: 4.7684rem
+  )
+);
+
+// Function to strip units (Dart Sass compatible)
+@function strip-unit($value) {
+  @if type-of($value) == 'number' and not unitless($value) {
+    @return $value / ($value * 0 + 1);
+  }
+  @return $value;
+}
+
+// Function to generate fluid values
+@function fluid-calc($min-value, $max-value, $min-vw: $min-viewport, $max-vw: $max-viewport) {
+  // Convert all values to rem numbers
+  $min-value: strip-unit($min-value);
+  $max-value: strip-unit($max-value);
+  $min-vw: strip-unit($min-vw);
+  $max-vw: strip-unit($max-vw);
+  
+  $slope: ($max-value - $min-value) / ($max-vw - $min-vw);
+  $intersection: (-$min-vw * $slope + $min-value) * 1rem;
+  $slope-vw: $slope * 100vw;
+  
+  @return clamp(#{$min-value}rem, #{$intersection} + #{$slope-vw}, #{$max-value}rem);
+}
+
+// Root variables for the type scale
+:root {
+  @each $step, $values in $type-scale {
+    $min-size: map.get($values, min-size);
+    $max-size: map.get($values, max-size);
+    
+    // Store the fluid typography calculation
+    --fs-#{$step}: #{fluid-calc($min-size, $max-size)};
+    
+    // Store individual min and max sizes for reference
+    --fs-#{$step}-min: #{$min-size};
+    --fs-#{$step}-max: #{$max-size};
+  }
+}
+
+// Utility classes using CSS custom properties
+@each $step, $values in $type-scale {
+  .util--fs-step-#{$step} {
+    font-size: var(--fs-#{$step});
+  }
+}
+
+// Placeholder selectors using CSS custom properties
+@each $step, $values in $type-scale {
+  %type-scale-#{$step} {
+    font-size: var(--fs-#{$step});
+  }
+}
