@@ -6,64 +6,98 @@
 @use "base/animations";
 @use "base/utilities";
 
-
 @use "util/mixins" as mixin;
 @use "util/spacing";
 
-
 //@use "base/mixins";
 body {
-    background-color: var(--color-background);
-    color: var(--color-black-olive--1);
-    
+  background-color: var(--color-background);
+  color: var(--color-black-olive--1);
 }
+
+.firstclass {
+  min-height: 100vh;
+  border: 1px solid red;
+  display: flex;
+  align-items: flex-end;
+  color: var(--color-black-olive--0);
+
+  span {
+    color: var(--color-gray--1);
+  }
+}
+// .letterhead {
+//   max-width: 70%;
+//   margin: 0 auto;
+//   text-align: center;
+
+//   h1 {
+//     font-size: var(--fs-6);
+//     font-weight: 700;
+//     margin: 0;
+//     text-transform: uppercase;
+//   }
+
+//   span {
+//     display: block;
+//   }
+
+//   .landscape {
+//     display: flex;
+//     font-size: var(--fs-1);
+
+//     span {
+//       &:first-child {
+//         font-size: var(--fs--1);
+//         font-weight: 200;
+//       }
+//     }
+//   }
+//}
 
 header {
-    font-size: var(--fs-2);
-    border: 2px solid red;
-    padding: var(--util-space-4) 0;
-    margin-bottom: 4rem;
-    
+  font-size: var(--fs-2);
+  // border: 2px solid red;
+  padding: var(--util-space-4) 0;
+  margin-bottom: 4rem;
 
-    .container {
-        display:  flex;
-        flex-direction: row;
-        justify-content: space-between;
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-        div {
-            
-        }
-        menu {
-            border: 1px solid;
-            text-align: left;
-            margin: 0;
-            padding: 0;
-
-            li {
-                display: inline-block;
-                margin: 0;
-
-                a {
-                    text-decoration: none;
-
-                }
-            }
-        }
+    div {
     }
+    menu {
+      border: 1px solid;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin: 0;
+        margin-right: var(--util-space-12);
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
 }
 
-
 .boom {
-    min-height: 100vh;
+  min-height: 100vh;
 
-    .intro {
-        font-size: var(--fs-3);
-        font-weight: 200;
-        max-width: 70%;
+  .intro {
+    font-size: var(--fs-3);
+    font-weight: 200;
+    max-width: 70%;
+  }
+  .blown {
+    h1 {
+      font-size: 100%;
     }
-    .blown {
-        h1 {
-            font-size: 100%;
-        }
-    }
+  }
 }
